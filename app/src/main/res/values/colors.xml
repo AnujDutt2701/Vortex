@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<color name="colorAccent">#6441A4</color>
+
+	<!--Day time themes-->
+	<color name="colorPrimaryThemeDay">#FFFFFF</color>
+	<color name="colorPrimaryDarkThemeDay">#000000</color>
+	<color name="textColorPrimaryThemeDay">#444444</color>
+	<color name="textColorSecondaryThemeDay">#999999</color>
+
+	<!--Night time themes-->
+	<color name="colorPrimaryThemeNight">#000000</color>
+	<color name="colorPrimaryDarkThemeNight">#333333</color>
+	<color name="textColorPrimaryThemeNight">#FFFFFF</color>
+	<color name="textColorSecondaryThemeNight">#CCCCCC</color>
+</resources>

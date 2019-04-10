@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
+            app:startDestination="@id/homeFragment">
+
+	<fragment android:id="@+id/homeFragment"
+	          android:name="com.alacritystudios.vortex.ui.fragment.home.HomeFragment"
+	          android:label="home_fragment"
+	          tools:layout="@layout/home_fragment"/>
+
+	<fragment android:id="@+id/browseFragment"
+	          android:name="com.alacritystudios.vortex.ui.fragment.games.GamesFragment"
+	          android:label="browse_fragment"
+	          tools:layout="@layout/games_fragment">
+		<action android:id="@+id/action_browseFragment_to_gameFragment" app:destination="@id/gameFragment"/>
+	</fragment>
+	<fragment android:id="@+id/gameFragment"
+	          android:name="com.alacritystudios.vortex.ui.fragment.game.GameFragment"
+	          android:label="game_fragment"
+	          tools:layout="@layout/game_fragment"/>
+</navigation>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".ui.activity.MainActivity">
+
+	<data></data>
+
+	<androidx.coordinatorlayout.widget.CoordinatorLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+		<com.google.android.material.appbar.AppBarLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:fitsSystemWindows="true">
+
+			<androidx.appcompat.widget.Toolbar
+					style="@style/ToolbarStyle"
+					android:id="@+id/toolbar"
+					app:layout_scrollFlags="scroll|enterAlways|snap"
+					android:layout_width="match_parent"
+					android:layout_height="60dp"/>
+		</com.google.android.material.appbar.AppBarLayout>
+
+		<FrameLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+			<fragment
+					android:name="androidx.navigation.fragment.NavHostFragment"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					app:navGraph="@navigation/nav_graph"
+					app:defaultNavHost="true"
+					app:layout_anchor="@id/bnv_main_activity"
+					android:id="@+id/fragment"/>
+		</FrameLayout>
+
+		<com.google.android.material.bottomnavigation.BottomNavigationView
+				app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+				android:layout_gravity="bottom"
+				app:menu="@menu/bottom_navigation_main_activity"
+				android:id="@+id/bnv_main_activity"
+				android:layout_width="match_parent"
+				android:layout_height="60dp"
+				android:background="?colorPrimary"
+				app:itemIconTint="@color/bottom_navigation_bar_color_state_list"
+				app:itemTextColor="@color/bottom_navigation_bar_color_state_list"/>
+	</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
+
+

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<data>
+		<variable name="stream" type="com.alacritystudios.vortex.data.domain.StreamsModelV5.Stream"/>
+		<variable name="onItemClickListener"
+		          type="com.alacritystudios.vortex.ui.adapter.StreamsAdapter.StreamsAdapterOnClickListener"/>
+	</data>
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+			xmlns:android="http://schemas.android.com/apk/res/android"
+			android:id="@+id/cl_root_view"
+			android:background="?android:attr/selectableItemBackground"
+			android:clickable="true"
+			android:focusable="true"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="16dp"
+			android:onClick="@{() -> onItemClickListener.onItemClick(stream)}">
+
+		<ImageView
+				android:id="@+id/iv_stream_preview"
+				app:imageUrl="@{ stream.preview.large }"
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				app:layout_constraintDimensionRatio="H,1:0.6"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"/>
+
+		<TextView
+				android:id="@+id/tv_broadcaster_name"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="@{stream.channel.display_name}"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/iv_stream_preview"/>
+
+		<!--<TextView-->
+				<!--android:id="@+id/iv_game_viewers"-->
+				<!--android:layout_width="wrap_content"-->
+				<!--android:layout_height="wrap_content"-->
+				<!--app:layout_constraintStart_toEndOf="@id/iv_game_art"-->
+				<!--app:layout_constraintEnd_toStartOf="@+id/iv_game_channels"-->
+				<!--app:layout_constraintTop_toBottomOf="@id/iv_game_name"/>-->
+
+		<!--<TextView-->
+				<!--android:id="@+id/iv_game_channels"-->
+				<!--android:layout_width="wrap_content"-->
+				<!--android:layout_height="wrap_content"-->
+				<!--app:layout_constraintStart_toEndOf="@id/iv_game_viewers"-->
+				<!--app:layout_constraintEnd_toEndOf="parent"-->
+				<!--app:layout_constraintTop_toBottomOf="@id/iv_game_name"-->
+				<!--app:layout_constraintBottom_toBottomOf="parent"/>-->
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

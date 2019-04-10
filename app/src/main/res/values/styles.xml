@@ -1,0 +1,60 @@
+<resources>
+
+	<!-- Base application theme. -->
+	<style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+		<item name="colorPrimary">@color/colorPrimaryThemeDay</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDarkThemeDay</item>
+		<item name="colorAccent">@color/colorAccent</item>
+	</style>
+	<!-- App theme without action bar -->
+	<style name="AppTheme.NoActionBar">
+		<item name="windowActionBar">false</item>
+		<item name="windowNoTitle">true</item>
+	</style>
+
+	<style name="AppTheme.DAY" parent="AppTheme.NoActionBar">
+		<item name="colorPrimary">@color/colorPrimaryThemeDay</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDarkThemeDay</item>
+		<item name="colorAccent">@color/colorAccent</item>
+		<item name="android:textColorPrimary">@color/textColorPrimaryThemeDay</item>
+		<item name="android:textColorSecondary">@color/textColorSecondaryThemeDay</item>
+	</style>
+
+	<style name="AppTheme.NIGHT" parent="AppTheme.NoActionBar">
+		<item name="colorPrimary">@color/colorPrimaryThemeNight</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDarkThemeNight</item>
+		<item name="colorAccent">@color/colorAccent</item>
+		<item name="android:textColorPrimary">@color/textColorPrimaryThemeNight</item>
+		<item name="android:textColorSecondary">@color/textColorSecondaryThemeNight</item>
+	</style>
+
+	<style name="ToolbarStyle">
+		<item name="android:textColor">?android:attr/textColorPrimary</item>
+		<item name="android:background">?android:attr/colorPrimary</item>
+	</style>
+
+
+	<style name="TextSecondary14sp">
+		<item name="android:fontFamily">sans-serif</item>
+		<item name="android:textSize">14sp</item>
+	</style>
+
+
+	<style name="BodyTextTier1">
+		<item name="android:fontFamily">sans-serif-medium</item>
+		<item name="android:textSize">16sp</item>
+		<item name="android:textStyle">normal</item>
+		<item name="android:maxLines">1</item>
+		<item name="android:ellipsize">end</item>
+		<item name="android:textColor">?android:attr/textColorPrimary</item>
+	</style>
+
+	<style name="BodyTextTier2">
+		<item name="android:fontFamily">sans-serif</item>
+		<item name="android:textSize">12sp</item>
+		<item name="android:textStyle">normal</item>
+		<item name="android:maxLines">1</item>
+		<item name="android:textColor">?android:attr/textColorSecondary</item>
+	</style>
+
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<item
+			android:id="@+id/homeFragment"
+			android:enabled="true"
+			android:title="@string/nav_home_fragment"
+			android:icon="@drawable/ic_home_black_24dp"
+			app:showAsAction="ifRoom" />
+
+	<item
+			android:id="@+id/browseFragment"
+			android:enabled="true"
+			android:title="@string/nav_browse_fragment"
+			android:icon="@drawable/ic_search_black_24dp"
+			app:showAsAction="ifRoom" />
+</menu>
